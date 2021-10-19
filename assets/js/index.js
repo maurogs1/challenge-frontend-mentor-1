@@ -4,8 +4,8 @@ let bookmarked = ["Bookmarked", "Bookmark"];
 let inputMarked;
 let modalsActive = [];
 let currentProgress = null;
-let currentProgressBrackers;
 
+let currentProgressBrackers = 5001;
 const maxProgressValue = 100000;
 const defaultProgressValue = 40000;
 
@@ -89,7 +89,8 @@ const progressValues = (value) => {
   
   currentProgress.value = value;
   document.getElementById('progressValue').innerHTML = value;
-  currentProgressBrackers.innerHTML =  (parseInt(currentProgressBrackers.innerHTML) + 1).toLocaleString('en-US') ;
+  document.getElementById('progressBrackers').innerHTML = (currentProgressBrackers + 1).toLocaleString('en-US') ;
+  currentProgressBrackers++;
 }
 
 window.onclick = (event) => {
@@ -103,8 +104,8 @@ window.onclick = (event) => {
 
 window.onload = () =>{
   currentProgress = document.getElementById('progress');  
-  currentProgress.value = defaultProgressValue;
-  currentProgressBrackers = document.getElementById('progressBrackers');
+  currentProgress.value = defaultProgressValue;  
+  document.getElementById('progressBrackers').innerHTML = (currentProgressBrackers).toLocaleString('en-US') ;
   document.getElementById('progressValue').innerHTML = currentProgress.value.toLocaleString('en-US');
 
 }
