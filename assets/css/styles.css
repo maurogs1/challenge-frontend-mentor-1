@@ -3,13 +3,12 @@
      src: url('./fonts/Commissioner-VariableFont_wght.ttf') format("opentype");
  }
 
- input[type=radio] {
-     border: 0px;
-     width: 15%;
-     height: 1.5em;
-     margin-top: .2em;
+ body{
+    background-color:  hsl(0, 0%, 98%);
+
  }
 
+ 
  :root {
      --c-primary: hsl(176, 50%, 47%);
      --c-primary-dark: hsl(176, 72%, 28%);
@@ -109,6 +108,7 @@
      font-size: 0.9rem;
      line-height: bold;
      min-height: 56px;
+     outline: 0;
      padding: 0 2.2rem;
      position: relative;
  }
@@ -248,6 +248,13 @@
  input[type=number] {
      -moz-appearance: textfield;
  }
+ input[type=radio] {
+    border: 0px;
+    width: 15%;
+    height: 1.5em;
+    margin-top: .2em;
+}
+
 
  input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
      -webkit-appearance: none;
@@ -481,7 +488,7 @@
  .success-message {
      align-self: center;
      display: flex;
-     height: 35%;
+     height: 50%;
      justify-content: center;
      flex-direction: column;
      min-width: 250px;
